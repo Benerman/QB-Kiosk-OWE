@@ -37,8 +37,9 @@ def main():
         json.dump(output_dict, f)
 
 def pull_git():
-    g = git.cmd.Git(os.getcwd())
-    g.pull()
+#    g = git.cmd.Git('.')
+#    g.pull()
+    subprocess.run(['cd', '/home/studio/dashboard', '&&', 'git', 'pull'], shell=True, check=True, capture_output=True)
     subprocess.run('reboot', shell=True, check=True, capture_output=True)
 
 if __name__ == '__main__':
