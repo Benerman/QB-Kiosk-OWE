@@ -9,3 +9,4 @@ __pycache__
 pyvenv.cfg
 temp.log
 logs/
+data/qb-data.json
