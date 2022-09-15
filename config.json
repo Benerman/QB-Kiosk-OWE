@@ -1,0 +1,85 @@
+{
+    "URL": "https://api.quickbase.com/v1/records/query",
+    "POSTURL": "https://api.quickbase.com/v1/records",
+    "QB_URL": "lowes.quickbase.com",
+    "QUERY": {
+        "from": "brtay9fir",
+        "select": [
+          66,
+          126,
+          160,
+          25
+        ],
+        "where": "{126.XEX.''}AND(({160.CT.'D'}OR{160.CT.'E'}OR{160.CT.'F'}OR{160.CT.'G'}OR{160.CT.'H'}OR{160.CT.'I'}OR{160.CT.'J'}OR{160.CT.'K'})AND({160.CT.'16'}OR{160.CT.'17'}OR{160.CT.'18'}))",
+        "groupBy": [
+          {
+            "fieldId": 126,
+            "grouping": "equal-values"
+          }
+        ]
+      },
+    "TABLE_IDS": {
+        "Projects": "brtgcjtn2",
+        "Production Requests": "brs2s399w",
+        "Asset Request": "brtay9fir",
+        "Inventory": "brs2n3kdj",
+        "Item Library": "brs2pk3ky",
+        "Asset Library": "brtajuki8",
+        "Inventory Locations": "brs9uhefx",
+        "Production Locations": "brs9teikx",
+        "Content Standards": "brtapnkyz",
+        "Product Categories": "brtaq8aau",
+        "Business Partners": "brtamzx2n",
+        "Vendors": "brtanvadd",
+        "Retoucher": "brtazj27y",
+        "Content Creators": "brtaqvprj",
+        "Equipment Library": "brtam88n5",
+        "Propping": "brtaphjjr"
+    },
+    "ASSET_STATUSES": [
+      "Asset Captured",
+      "Asset Delivered",
+      "Placeholder-NFC",
+      "Cancelled"
+    ],
+    "REJECTED_ASSET_STATUSES": [
+      "",
+      "Rejected"
+    ],
+    "ON_WHITE_COMPLEXITIES": [
+        "Package",
+        "Silo",
+        "Detail",
+        "Spin 24",
+        "Spin 48",
+		    "Spin 72",
+        "3D Reference"
+    ],
+    "GPS_COORDINATES": [
+        "D-16",
+        "D-17",
+        "D-18",
+        "E-16",
+        "E-17",
+        "E-18",
+        "F-16",
+        "F-17",
+        "F-18",
+        "G-16",
+        "G-17",
+        "G-18",
+        "H-16",
+        "H-17",
+        "H-18",
+        "I-16",
+        "I-17",
+        "I-18",
+        "J-16",
+        "J-17",
+        "J-18",
+        "K-16",
+        "K-17",
+        "K-18"
+    ],
+    "prev_query": {"where": "{88.EX.'On White'}AND{25.EX.'Package'}OR{25.EX.'Silo'}OR{25.EX.'Detail'}OR{25.EX.'Spin'}OR{25.EX.'Reference'}AND{126.XEX.''}"}
+}

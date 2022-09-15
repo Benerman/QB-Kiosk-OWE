@@ -1,0 +1,10 @@
+mkdir dashboard
+cd dashboard
+sudo apt install python3.10-venv
+python3 -m venv venv .
+source venv/bin/activate
+git clone https://gitlab.com/integration35/raspie-ux-dsp-1.git
+pip install -f requirements.txt
+
+
+flask --app kiosk --debug run --host=0.0.0.0

@@ -1,0 +1,11 @@
+token.txt
+venv/
+bin
+include
+lib
+lib64
+logic.py
+__pycache__
+pyvenv.cfg
+temp.log
+logs/
