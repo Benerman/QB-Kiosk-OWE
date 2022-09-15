@@ -44,7 +44,7 @@ def pull_git():
 
 if __name__ == '__main__':
     # Schedule during normal business hours
-    schedule.every(10).minutes.do(pull_git)
+    schedule.every(1).minutes.do(pull_git)
     schedule.every(3).minutes.do(main)
     while True:
         schedule.run_pending()
