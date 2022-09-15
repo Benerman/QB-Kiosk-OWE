@@ -1,4 +1,4 @@
-import requests, schedule, datetime, json
+import requests, schedule, datetime, json, git, subprocess, os
 
 
 def main():
@@ -26,7 +26,6 @@ def main():
         print(f'{datetime.datetime.now().strftime("%Y/%m/%d %H:%M")} | Status: {response.status_code} | ERROR: Decode JSON error\n{e}')
         print(f"{response.text}")
         return
-    result.items()
     metadata = result['metadata']
     print(metadata['totalRecords'], metadata['numRecords'])
     data = result['data']
@@ -34,13 +33,17 @@ def main():
         'ids': data,
         "date_updated": datetime.datetime.now().strftime("%Y/%m/%d %H:%M")
     }
-
-
     with open('data/qb-data.json', 'w') as f:
         json.dump(output_dict, f)
 
+def pull_git():
+    g = git.cmd.Git(os.getcwd())
+    g.pull()
+    subprocess.run('reboot', shell=True, check=True, capture_output=True)
+
 if __name__ == '__main__':
     # Schedule during normal business hours
+    schedule.every(10).minutes.do(pull_git)
     schedule.every(3).minutes.do(main)
     while True:
         schedule.run_pending()
